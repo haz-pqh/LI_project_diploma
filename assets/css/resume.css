@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a3a3a3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150vh;
+    font-size: 13px;
+}
+
+.resume-container {
+    width: 800px;
+    height: 138vh;
+    background-color: #ffffff;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture{
+    width: 100%;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    border-radius: 0 0 0 100%;
+}
+
+.header-text {
+    width: 350px;
+    height: fit-content;
+}
+
+.header-text h1 {
+    width: 420px;
+    height: fit-content;
+    margin-top: 60px;
+    font-size: 35px;
+    color: black;
+}
+
+.header-text h2 {
+    width: 420px;
+    font-size: 17px;
+    color: #cccccc;
+}
+
+.header-text p{
+    font-size: 13px;
+    color: #aaaaaa;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.main-content {
+    height: fit-content;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.left-column{
+    width: 50%;
+    height: 138vh;
+    background-color: #0b2e58;
+    color: white;
+    text-align: center;
+}
+
+.right-column {
+    width: 50%;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.contact{
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.expertise{
+    width: 100%;
+    padding: 10px;
+}
+
+.language, .work-experience, .education, .skills-summary {
+    margin-bottom: 20px;
+}
+
+.expertise h2, .language h2{
+    border-bottom: 2px solid white;
+    color: white;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.work-experience h2, .education h2, .skills-summary h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.expertise .job h3, .language .job h3{
+    color: rgb(186, 186, 186);
+}
+
+.language .job p{
+    color: rgb(149, 149, 149);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.contact ul {
+    list-style-type: none;
+    font-size: 15px;
+}
+
+.expertise ul{
+    width: 100%;
+}
+
+.expertise ul li{
+    list-style: none;
+    width: 100%;
+    background-color: white;
+    /* background-color: #1f5ba2; */
+    padding: 10px;
+    border-radius: 10px;
+    /* color: white; */
+    color: black;
+    border: 0;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.language ul {
+    padding-left: 20px;
+}
+
+.language ul li{
+    list-style: none;
+}
+
+.contact li i {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.work-experience .job, .education .school {
+    margin-bottom: 20px;
+}
+
+.job h3, .school h3 {
+    margin: 0;
+    font-size: 15px;
+    color: #333;
+}
+
+.job p, .school p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.skills-summary .skill {
+    margin-bottom: 10px;
+}
+
+.skill p {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.button-container {
+    margin-top: 20px;
+    margin-left: 10%;
+    
+    width: 200px;
+    height: 30px;
+}
+
+
+.button-container button{
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: black;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.button-container button:hover{
+    background-color: white;
+    color: black;
+}
+
+/* .button-container a{
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: black;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    transition: .4s;
+    text-decoration: none;
+} */
+
+.button-container a:hover{
+    background-color: white;
+    color: black;
+}
+
+.logoPart{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+}
+.logoPart .logo{
+    width: 100px;
+}
+
+.logoPart .logo1{
+    width: 100px;
+    height: 35px;
+    margin-top: 7px;
+}
+
+.qrCodePart{
+    width: 100%;
+}
+
+
+.qrCodePart .qrCode{
+    width: 100px;
+    height: 100px;
+    margin-left: 250px;
+}
+
+.qrCodePart .qrCode img{
+    width: 100px;
+    height: 100px;
+}
+
+.qrCodePart p{
+    width: 100px;
+    height: fit-content;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 250px;
+    margin-top: 5px;
+}
