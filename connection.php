@@ -5,7 +5,7 @@
 <body>
     <?php
 
-    $db = mysqli_connect("localhost","root","","fcom2");
+    $db = mysqli_connect("localhost","root","","fcom");
 
     if (!$db){
     die('Connection Failed: ' .mysqli_connect_error());
