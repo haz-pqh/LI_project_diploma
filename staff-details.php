@@ -121,7 +121,24 @@
                             <div class="service-box">
                               <h4>Download Catalog</h4>
                               <div class="download-catalog">
-                              <a href="resume.php?username='.$row["user_name"].'" target="_blank"><i class="bi bi-filetype-pdf"></i><span>Download CV PDF</span></a>
+                              <div id="alert_message"></div>
+                              <a id="displayWidthBtn" style="cursor: pointer;"><i class="bi bi-filetype-pdf"></i><span>Download CV PDF</span></a>
+                              <script>
+                                document.getElementById("displayWidthBtn").addEventListener("click", function() {
+                                    // Get the width of the page
+                                    var pageWidth = window.innerWidth;
+
+                                    // Display the width in the paragraph
+                                    if(pageWidth < 1090){
+                                        document.getElementById("alert_message").innerHTML = `<div class="alert alert-danger" role="alert">
+                                                                                                Only can download on desktop!!
+                                                                                              </div>`;
+                                    }else{
+                                        window.location.href = "resume.php?username='.$row["user_name"].'";
+                                    }
+                                });
+
+                              </script>
                             <a href="update_profile/login_page.php?id='.$row["id"].'"><i class="bi bi-pencil-square"></i><span>Update Profile</span></a>
                           </div>
                         </div><!-- End Services List -->';
@@ -172,7 +189,7 @@
                   echo '<p>'.mysqli_error ($db).'<br><br/>Query:'.$a.'</p>'; 
               }
 
-              $a = "SELECT * FROM contact WHERE id='$username'";
+              $a = "SELECT * FROM staff WHERE staff_id='$username'";
 
               $result = @mysqli_query ($db, $a);
 
@@ -184,7 +201,7 @@
                       echo'
 
                       <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
-                        <h3>'.$row["name"].'<span>';
+                        <h3>'.$row["staff_name"].'<span>';
                         
                   }
 
@@ -223,7 +240,7 @@
                   echo '<p>'.mysqli_error ($db).'<br><br/>Query:'.$a.'</p>'; 
               }
 
-              $a = "SELECT * FROM contact WHERE id='$username'";
+              $a = "SELECT * FROM contact INNER JOIN users ON contact.user_name = users.user_name WHERE users.id='$username'";
 
               $result = @mysqli_query ($db, $a);
 
