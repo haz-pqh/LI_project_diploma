@@ -122,7 +122,25 @@
             {
               while($row=mysqli_fetch_array($result, MYSQLI_ASSOC))
               {
-                echo '<li><a href="../resume.php?username='.$row['user_name'].'">Download CV PDF</a></li>';
+                echo '
+                <div id="alert_message"></div>
+                <li><a id="displayWidthBtn" style="cursor: pointer;">Download CV PDF</a></li>
+                              <script>
+                                document.getElementById("displayWidthBtn").addEventListener("click", function() {
+                                    // Get the width of the page
+                                    var pageWidth = window.innerWidth;
+
+                                    // Display the width in the paragraph
+                                    if(pageWidth < 1090){
+                                        document.getElementById("alert_message").innerHTML = `<div class="alert alert-danger" role="alert">
+                                                                                                Only can download on desktop!!
+                                                                                              </div>`;
+                                    }else{
+                                        window.location.href = "../resume.php?username='.$row['user_name'].'";
+                                    }
+                                });
+
+                              </script>';
               }
             }
           ?>
@@ -133,7 +151,6 @@
   </header>
 
   <main class="main">
-
     <!-- Hero Section -->
     <section id="" class="hero section dark-background">
 
